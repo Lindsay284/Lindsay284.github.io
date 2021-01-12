@@ -5,12 +5,46 @@
         <link>http://example.com</link>
         <description>我是我过往一切经历的总和</description>
         <language>en</language>
-        <pubDate>Sun, 10 Jan 2021 18:24:17 +0800</pubDate>
-        <lastBuildDate>Sun, 10 Jan 2021 18:24:17 +0800</lastBuildDate>
+        <pubDate>Tue, 12 Jan 2021 20:54:49 +0800</pubDate>
+        <lastBuildDate>Tue, 12 Jan 2021 20:54:49 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2021/01/10/computer/hello-world/</guid>
+            <guid isPermalink="true">http://example.com/2021/01/12/Win10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
+            <title>Win10桌面美化</title>
+            <link>http://example.com/2021/01/12/Win10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
+            <pubDate>Tue, 12 Jan 2021 20:54:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;win10桌面美化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#win10桌面美化&#34;&gt;#&lt;/a&gt; Win10 桌面美化&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;壁纸。&lt;/p&gt;
+&lt;p&gt;下载 wallpaper engine，并从中下载壁纸（吹爆）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;任务栏透明化。&lt;/p&gt;
+&lt;p&gt;下载软件 TranslucentTB，全部选择 clear 使任务栏透明化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;居中任务栏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;win+q，搜索字符映射表，找到第五行的空白字符并复制&lt;/li&gt;
+&lt;li&gt;在桌面建立一个空文件夹，以这个空白字符作为这个文件夹的名字&lt;/li&gt;
+&lt;li&gt;右键任务栏，任务栏 -&amp;gt; 新建任务栏，并选择这个空文件夹&lt;/li&gt;
+&lt;li&gt;右键任务栏，如果 “锁定任务栏” 前有√，单击取消，如果没有则不管&lt;/li&gt;
+&lt;li&gt;任务栏左右出现两个拖动条，先将右侧拖动条拖到中间，再把左侧拖动条拖到右边（超过右侧拖动条的位置）&lt;/li&gt;
+&lt;li&gt;然后就居中成功啦！右键任务栏，锁定任务栏，我们就可以删掉桌面的文件夹了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;桌面整理。&lt;/p&gt;
+&lt;p&gt;同时还使用了腾讯的桌面整理（独立版）对桌面进行整理和美化，最终效果如下&lt;img src=&#34;/2021/01/12/Win10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/E:%5Cblog%5Cblog%5Cblog%5Csource_posts%5CWin10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%5Cimage-20210112205218939.png&#34; alt=&#34;image-20210112205218939&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;5. 美化完毕&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/01/10/hello-world/</guid>
             <title>Hello World</title>
-            <link>http://example.com/2021/01/10/computer/hello-world/</link>
+            <link>http://example.com/2021/01/10/hello-world/</link>
             <pubDate>Sun, 10 Jan 2021 18:24:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
