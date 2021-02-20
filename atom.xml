@@ -8,7 +8,8 @@
         <id>http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/</id>
         <title>Manjaro配置</title>
         <link rel="alternate" href="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/"/>
-        <content type="html">&lt;h1 id=&#34;manjaro-kde&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#manjaro-kde&#34;&gt;#&lt;/a&gt; Manjaro-KDE&lt;/h1&gt;
+        <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&#34;manjaro-kde&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#manjaro-kde&#34;&gt;#&lt;/a&gt; Manjaro-KDE&lt;/h1&gt;
 &lt;p&gt;​		在 mtc 的力荐下，ljh 给自己的电脑装了 manjaro-KDE 双系统，和 win10 一起启动。&lt;/p&gt;
 &lt;p&gt;​		个人觉得 linux 适合长续航、轻办公、轻代码条件下使用，续航比 windows 长。为了避免以后老师给一个只能在 win10 条件下运行的软件，所以没有删除 windows 系统。记录一下以防以后再次重装…&lt;/p&gt;
 &lt;h2 id=&#34;安装步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装步骤&#34;&gt;#&lt;/a&gt; 安装步骤&lt;/h2&gt;
