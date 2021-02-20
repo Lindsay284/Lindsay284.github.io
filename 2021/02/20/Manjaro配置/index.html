@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>categories | A Study Blog</title>
+  <title>Manjaro配置 | A Study Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我是我过往一切经历的总和">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://example.com/categories/index-1.html">
+  <meta name="description" content="# Manjaro-KDE ​		在 mtc 的力荐下，ljh 给自己的电脑装了 manjaro-KDE 双系统，和 win10 一起启动。 ​		个人觉得 linux 适合长续航、轻办公、轻代码条件下使用，续航比 windows 长。为了避免以后老师给一个只能在 win10 条件下运行的软件，所以没有删除 windows 系统。记录一下以防以后再次重装… # 安装步骤  从 ventoy 官网下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manjaro配置">
+<meta property="og:url" content="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="A Study Blog">
-<meta property="og:description" content="我是我过往一切经历的总和">
+<meta property="og:description" content="# Manjaro-KDE ​		在 mtc 的力荐下，ljh 给自己的电脑装了 manjaro-KDE 双系统，和 win10 一起启动。 ​		个人觉得 linux 适合长续航、轻办公、轻代码条件下使用，续航比 windows 长。为了避免以后老师给一个只能在 win10 条件下运行的软件，所以没有删除 windows 系统。记录一下以防以后再次重装… # 安装步骤  从 ventoy 官网下">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-12T10:05:27.000Z">
-<meta property="article:modified_time" content="2021-01-12T10:05:27.320Z">
+<meta property="og:image" content="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723013047634.png">
+<meta property="og:image" content="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723023646972.png">
+<meta property="og:image" content="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/2020072302322817.png">
+<meta property="article:published_time" content="2021-02-20T06:15:09.000Z">
+<meta property="article:modified_time" content="2021-02-20T07:02:07.594Z">
 <meta property="article:author" content="Lindsay">
 <meta property="article:tag" content="Study &amp;&amp; Life">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723013047634.png">
   
     <link rel="alternative" href="/atom.xml" title="A Study Blog" type="application/atom+xml">
   
@@ -162,20 +166,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Manjaro配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      Manjaro配置
     </h1>
   
 
         
-        <a href="/categories/index-1.html" class="archive-article-date">
-  	<time datetime="2021-01-12T10:05:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-12</time>
+        <a href="/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2021-02-20T06:15:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
 </a>
         
       </header>
@@ -184,7 +188,90 @@
     
 
       
-        
+        <h1 id="manjaro-kde"><a class="markdownIt-Anchor" href="#manjaro-kde">#</a> Manjaro-KDE</h1>
+<p>​		在 mtc 的力荐下，ljh 给自己的电脑装了 manjaro-KDE 双系统，和 win10 一起启动。</p>
+<p>​		个人觉得 linux 适合长续航、轻办公、轻代码条件下使用，续航比 windows 长。为了避免以后老师给一个只能在 win10 条件下运行的软件，所以没有删除 windows 系统。记录一下以防以后再次重装…</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤">#</a> 安装步骤</h2>
+<ol>
+<li>从<strong> ventoy</strong> 官网下载 ventoy，并安装到空 u 盘</li>
+<li>从<strong> Manjaro</strong> 官网下载最新的 Manjaro-Kde.iso，并直接拖入 U 盘</li>
+<li>从微 Pe 官网下载 wepe.iso 并直接拖入 U 盘</li>
+<li>按 ESC 进入 UEFI BIOS 调整启动顺序，将 USB 设备的启动顺序放在第一个</li>
+<li>重启，插入 U 盘，进入 U 盘启动界面，选择 WEPE，并打开 DiskGenius，分出一个<strong>分区</strong>（假设为 G 盘）</li>
+<li>再次<strong>重启</strong>，由于没有改动启动顺序，再次启动仍然先进入 U 盘，选择 Manjaro-Kde 并进入</li>
+<li>按照引导步骤进行<strong>安装</strong>，安装时选择覆盖我们分出的 G 盘</li>
+</ol>
+<h2 id="配置步骤"><a class="markdownIt-Anchor" href="#配置步骤">#</a> 配置步骤</h2>
+<h3 id="换源"><a class="markdownIt-Anchor" href="#换源">#</a> 换源</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>右键桌面并打开终端，输入以上内容，选择 tsinghua 的源</p>
+</blockquote>
+<h3 id="添加aur的源"><a class="markdownIt-Anchor" href="#添加aur的源">#</a> 添加 AUR 的源</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano &#x2F;etc&#x2F;pacman.conf</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>打开终端输入以上内容，并在打开的文件末尾输入</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel &#x3D; Optional TrustedOnly</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure>
+<p>保存后更新：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syyu</span><br></pre></td></tr></table></figure>
+<p>注意此步骤需要联网</p>
+<p>然后安装 <code>archlinuxcn-keyring</code>  包导入 <code>GPG key</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
+<h3 id="安装aur包管理工具yay"><a class="markdownIt-Anchor" href="#安装aur包管理工具yay">#</a> 安装 AUR 包管理工具 <code>yay</code></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure>
+<p>可以用 yay 替代 sudo pacman 安装软件了！</p>
+<h3 id="安装输入法"><a class="markdownIt-Anchor" href="#安装输入法">#</a> 安装输入法</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx-googlepinyin</span><br><span class="line">sudo pacman -S fcitx-im</span><br><span class="line">sudo pacman -S fcitx-configtool</span><br></pre></td></tr></table></figure>
+<h4 id="修改配置文件"><a class="markdownIt-Anchor" href="#修改配置文件">#</a> 修改配置文件</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano ~&#x2F;.xprofile</span><br></pre></td></tr></table></figure>
+<p>在打开的文件中写入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export GTK_IM_MODULE&#x3D;fcitx</span><br><span class="line">export QT_IM_MODULE&#x3D;fcitx</span><br><span class="line">export XMODIFIERS&#x3D;&quot;@im&#x3D;fcitx&quot;</span><br><span class="line">export XIM&#x3D;fcitx</span><br><span class="line">export XIM_PROGRAM&#x3D;fcitx</span><br></pre></td></tr></table></figure>
+<p>保存文件，重启系统。之后就能看到工具栏上出现了小键盘图标，点击图标就可以配置输入法，可以加入、删除、设置快捷键等等。我是将键盘放在第一位（键盘就是直接输入英文），然后 google 拼音放入第二位，并且设置快捷键为 shift 激活输入法，这样就可以实现 shift 切换英文和中文了。</p>
+<p><img src="/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723013047634.png" alt="img"></p>
+<h3 id="安装各种软件"><a class="markdownIt-Anchor" href="#安装各种软件">#</a> 安装各种软件</h3>
+<h4 id="安装chrome浏览器"><a class="markdownIt-Anchor" href="#安装chrome浏览器">#</a> 安装 chrome 浏览器</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S google-chrome</span><br></pre></td></tr></table></figure>
+<h4 id="安装vscode"><a class="markdownIt-Anchor" href="#安装vscode">#</a> 安装 vscode</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S visual-studio-code-bin</span><br></pre></td></tr></table></figure>
+<h4 id="安装typora"><a class="markdownIt-Anchor" href="#安装typora">#</a> 安装 typora</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S typora</span><br></pre></td></tr></table></figure>
+<h4 id="安装网易云音乐"><a class="markdownIt-Anchor" href="#安装网易云音乐">#</a> 安装网易云音乐</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S netease-cloud-music</span><br></pre></td></tr></table></figure>
+<h4 id="安装qq和百度网盘"><a class="markdownIt-Anchor" href="#安装qq和百度网盘">#</a> 安装 qq 和百度网盘</h4>
+<p>在自带的软件安装里面可以找到 linux qq，感觉比较清爽简洁。</p>
+<p>百度网盘… 忘记怎么装的了。</p>
+<h4 id="安装wps"><a class="markdownIt-Anchor" href="#安装wps">#</a> 安装 WPS</h4>
+<p>WPS 这个比较特殊，需要先安装 debtap 才能解压和安装</p>
+<p>而 debtap 直接安装非常非常非常慢，需要一两个小时，所以进行了换软件源</p>
+<p>首先安装 debtap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S debtap</span><br></pre></td></tr></table></figure>
+<p>国内升级 debtap 提速</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo nano &#x2F;usr&#x2F;bin&#x2F;debtap</span><br><span class="line"># 在打开的文件中，使用替换功能，进行如下替换</span><br><span class="line">替换</span><br><span class="line">http:&#x2F;&#x2F;ftp.debian.org&#x2F;debian&#x2F;dists</span><br><span class="line">为</span><br><span class="line">https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;debian&#x2F;dists</span><br><span class="line">替换</span><br><span class="line">http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists</span><br><span class="line">为</span><br><span class="line">https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu&#x2F;dists&#x2F;</span><br></pre></td></tr></table></figure>
+<p>退出保存后执行 sudo debtap -u</p>
+<p>很快就可以装好</p>
+<p>然后我们装 WPS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office ttf-wps-fonts</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-mui-zh-cn</span><br></pre></td></tr></table></figure>
+<h4 id="必备字体安装"><a class="markdownIt-Anchor" href="#必备字体安装">#</a> 必备字体安装</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S wqy-bitmapfont wqy-microhei \</span><br><span class="line"> wqy-zenhei adobe-source-code-pro-fonts \</span><br><span class="line"> adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts \</span><br><span class="line"> adobe-source-han-sans-cn-fonts ttf-monaco ttf-dejavu ttf-hanazono \</span><br><span class="line"> noto-fonts noto-fonts-cjk noto-fonts-emoji </span><br></pre></td></tr></table></figure>
+<h3 id="删除软件"><a class="markdownIt-Anchor" href="#删除软件">#</a> 删除软件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Rs 软件名</span><br></pre></td></tr></table></figure>
+<h3 id="美化界面"><a class="markdownIt-Anchor" href="#美化界面">#</a> 美化界面</h3>
+<h3 id="下载docker"><a class="markdownIt-Anchor" href="#下载docker">#</a> 下载 docker</h3>
+<p>每个程序员都应该拥有一个 dock！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S docker</span><br><span class="line">sudo pacman -S latte-dock</span><br></pre></td></tr></table></figure>
+<p>打开 latte-dock 即可</p>
+<p><img src="/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723023646972.png" alt="在这里插入图片描述"></p>
+<h3 id="换mac主题"><a class="markdownIt-Anchor" href="#换mac主题">#</a> 换 mac 主题</h3>
+<p>设置 - 外观 - 全局主题，点击右下角获取新的全局主题，搜索 <code>McMojave</code> ，安装，然后关闭。在全局主题设置页面，选中刚刚下好的 McMojave。就会变成好看的 mac 啦！</p>
+<p><img src="/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/2020072302322817.png" alt="img"></p>
+<h2 id="转载说明"><a class="markdownIt-Anchor" href="#转载说明">#</a> 转载说明</h2>
+<p>本文内容主要来自两篇博客：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53424000/article/details/110942764?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161380408316780266286402%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=161380408316780266286402&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2">https://blog.csdn.net/qq_53424000/article/details/110942764?ops_request_misc=%7B%22request%5Fid%22%3A%22161380408316780266286402%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;request_id=161380408316780266286402&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2</a><sub>all</sub>first_r</p>
+<p>以及</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40293491/article/details/107526553?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161380178216780274161976%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=161380178216780274161976&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2">https://blog.csdn.net/weixin_40293491/article/details/107526553?ops_request_misc=%7B%22request%5Fid%22%3A%22161380178216780274161976%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;request_id=161380178216780274161976&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2</a><sub>all</sub>first_rank_v2~rank_v29-8-107526553.pc_search_result_no_baidu_js&amp;utm_term=kde%E9%85%8D%E7%BD%AE</p>
+
       
 
       
@@ -273,7 +360,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/categories/index-1.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,6 +372,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/12/Win10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Win10桌面美化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -306,7 +403,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#manjaro-kde"><span class="toc-number">1.</span> <span class="toc-text"> Manjaro-KDE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.</span> <span class="toc-text"> 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.2.</span> <span class="toc-text"> 配置步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 换源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0aur%E7%9A%84%E6%BA%90"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 添加 AUR 的源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85aur%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7yay"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 安装 AUR 包管理工具 yay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 安装输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.4.1.</span> <span class="toc-text"> 修改配置文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.2.5.</span> <span class="toc-text"> 安装各种软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85chrome%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">1.2.5.1.</span> <span class="toc-text"> 安装 chrome 浏览器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85vscode"><span class="toc-number">1.2.5.2.</span> <span class="toc-text"> 安装 vscode</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85typora"><span class="toc-number">1.2.5.3.</span> <span class="toc-text"> 安装 typora</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="toc-number">1.2.5.4.</span> <span class="toc-text"> 安装网易云音乐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85qq%E5%92%8C%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98"><span class="toc-number">1.2.5.5.</span> <span class="toc-text"> 安装 qq 和百度网盘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85wps"><span class="toc-number">1.2.5.6.</span> <span class="toc-text"> 安装 WPS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%85%E5%A4%87%E5%AD%97%E4%BD%93%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.5.7.</span> <span class="toc-text"> 必备字体安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.2.6.</span> <span class="toc-text"> 删除软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="toc-number">1.2.7.</span> <span class="toc-text"> 美化界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDdocker"><span class="toc-number">1.2.8.</span> <span class="toc-text"> 下载 docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2mac%E4%B8%BB%E9%A2%98"><span class="toc-number">1.2.9.</span> <span class="toc-text"> 换 mac 主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E8%BD%BD%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text"> 转载说明</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -323,8 +420,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://example.com/categories/index-1.html", 
-    sourceId: "",
+    url: "http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/", 
+    sourceId: "Manjaro配置",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -347,9 +444,9 @@
     <script src="/lib/giteement.browser.js"></script>
   
   <script>
-  <!-- id: "categories" -->
+  <!-- id: "Manjaro配置" -->
   var giteement = new Giteement({
-    id: '20210112180527',
+    id: '20210220141509',
     owner: '',
     repo: 'yilia-plus-demo',
     backcall_uri: '',
@@ -393,7 +490,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -5,8 +5,98 @@
         <link>http://example.com</link>
         <description>我是我过往一切经历的总和</description>
         <language>en</language>
-        <pubDate>Tue, 12 Jan 2021 20:54:49 +0800</pubDate>
-        <lastBuildDate>Tue, 12 Jan 2021 20:54:49 +0800</lastBuildDate>
+        <pubDate>Sat, 20 Feb 2021 14:15:09 +0800</pubDate>
+        <lastBuildDate>Sat, 20 Feb 2021 14:15:09 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/</guid>
+            <title>Manjaro配置</title>
+            <link>http://example.com/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/</link>
+            <pubDate>Sat, 20 Feb 2021 14:15:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;manjaro-kde&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#manjaro-kde&#34;&gt;#&lt;/a&gt; Manjaro-KDE&lt;/h1&gt;
+&lt;p&gt;​		在 mtc 的力荐下，ljh 给自己的电脑装了 manjaro-KDE 双系统，和 win10 一起启动。&lt;/p&gt;
+&lt;p&gt;​		个人觉得 linux 适合长续航、轻办公、轻代码条件下使用，续航比 windows 长。为了避免以后老师给一个只能在 win10 条件下运行的软件，所以没有删除 windows 系统。记录一下以防以后再次重装…&lt;/p&gt;
+&lt;h2 id=&#34;安装步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装步骤&#34;&gt;#&lt;/a&gt; 安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;从&lt;strong&gt; ventoy&lt;/strong&gt; 官网下载 ventoy，并安装到空 u 盘&lt;/li&gt;
+&lt;li&gt;从&lt;strong&gt; Manjaro&lt;/strong&gt; 官网下载最新的 Manjaro-Kde.iso，并直接拖入 U 盘&lt;/li&gt;
+&lt;li&gt;从微 Pe 官网下载 wepe.iso 并直接拖入 U 盘&lt;/li&gt;
+&lt;li&gt;按 ESC 进入 UEFI BIOS 调整启动顺序，将 USB 设备的启动顺序放在第一个&lt;/li&gt;
+&lt;li&gt;重启，插入 U 盘，进入 U 盘启动界面，选择 WEPE，并打开 DiskGenius，分出一个&lt;strong&gt;分区&lt;/strong&gt;（假设为 G 盘）&lt;/li&gt;
+&lt;li&gt;再次&lt;strong&gt;重启&lt;/strong&gt;，由于没有改动启动顺序，再次启动仍然先进入 U 盘，选择 Manjaro-Kde 并进入&lt;/li&gt;
+&lt;li&gt;按照引导步骤进行&lt;strong&gt;安装&lt;/strong&gt;，安装时选择覆盖我们分出的 G 盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;配置步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置步骤&#34;&gt;#&lt;/a&gt; 配置步骤&lt;/h2&gt;
+&lt;h3 id=&#34;换源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#换源&#34;&gt;#&lt;/a&gt; 换源&lt;/h3&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman-mirrors -i -c China -m rank&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;右键桌面并打开终端，输入以上内容，选择 tsinghua 的源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;添加aur的源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加aur的源&#34;&gt;#&lt;/a&gt; 添加 AUR 的源&lt;/h3&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo nano &amp;#x2F;etc&amp;#x2F;pacman.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打开终端输入以上内容，并在打开的文件末尾输入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[archlinuxcn]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;SigLevel &amp;#x3D; Optional TrustedOnly&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Server &amp;#x3D; https:&amp;#x2F;&amp;#x2F;mirrors.tuna.tsinghua.edu.cn&amp;#x2F;archlinuxcn&amp;#x2F;$arch&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;保存后更新：&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -Syyu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意此步骤需要联网&lt;/p&gt;
+&lt;p&gt;然后安装 &lt;code&gt;archlinuxcn-keyring&lt;/code&gt;  包导入 &lt;code&gt;GPG key&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S archlinuxcn-keyring&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装aur包管理工具yay&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装aur包管理工具yay&#34;&gt;#&lt;/a&gt; 安装 AUR 包管理工具 &lt;code&gt;yay&lt;/code&gt;&lt;/h3&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S yay&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以用 yay 替代 sudo pacman 安装软件了！&lt;/p&gt;
+&lt;h3 id=&#34;安装输入法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装输入法&#34;&gt;#&lt;/a&gt; 安装输入法&lt;/h3&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S fcitx-googlepinyin&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S fcitx-im&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S fcitx-configtool&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;修改配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改配置文件&#34;&gt;#&lt;/a&gt; 修改配置文件&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo nano ~&amp;#x2F;.xprofile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在打开的文件中写入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;export GTK_IM_MODULE&amp;#x3D;fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;export QT_IM_MODULE&amp;#x3D;fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;export XMODIFIERS&amp;#x3D;&amp;quot;@im&amp;#x3D;fcitx&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;export XIM&amp;#x3D;fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;export XIM_PROGRAM&amp;#x3D;fcitx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;保存文件，重启系统。之后就能看到工具栏上出现了小键盘图标，点击图标就可以配置输入法，可以加入、删除、设置快捷键等等。我是将键盘放在第一位（键盘就是直接输入英文），然后 google 拼音放入第二位，并且设置快捷键为 shift 激活输入法，这样就可以实现 shift 切换英文和中文了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723013047634.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装各种软件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装各种软件&#34;&gt;#&lt;/a&gt; 安装各种软件&lt;/h3&gt;
+&lt;h4 id=&#34;安装chrome浏览器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装chrome浏览器&#34;&gt;#&lt;/a&gt; 安装 chrome 浏览器&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S google-chrome&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;安装vscode&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装vscode&#34;&gt;#&lt;/a&gt; 安装 vscode&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S visual-studio-code-bin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;安装typora&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装typora&#34;&gt;#&lt;/a&gt; 安装 typora&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S typora&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;安装网易云音乐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装网易云音乐&#34;&gt;#&lt;/a&gt; 安装网易云音乐&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S netease-cloud-music&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;安装qq和百度网盘&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装qq和百度网盘&#34;&gt;#&lt;/a&gt; 安装 qq 和百度网盘&lt;/h4&gt;
+&lt;p&gt;在自带的软件安装里面可以找到 linux qq，感觉比较清爽简洁。&lt;/p&gt;
+&lt;p&gt;百度网盘… 忘记怎么装的了。&lt;/p&gt;
+&lt;h4 id=&#34;安装wps&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装wps&#34;&gt;#&lt;/a&gt; 安装 WPS&lt;/h4&gt;
+&lt;p&gt;WPS 这个比较特殊，需要先安装 debtap 才能解压和安装&lt;/p&gt;
+&lt;p&gt;而 debtap 直接安装非常非常非常慢，需要一两个小时，所以进行了换软件源&lt;/p&gt;
+&lt;p&gt;首先安装 debtap&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yay -S debtap&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;国内升级 debtap 提速&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo nano &amp;#x2F;usr&amp;#x2F;bin&amp;#x2F;debtap&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 在打开的文件中，使用替换功能，进行如下替换&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;替换&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;http:&amp;#x2F;&amp;#x2F;ftp.debian.org&amp;#x2F;debian&amp;#x2F;dists&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;为&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;https:&amp;#x2F;&amp;#x2F;mirrors.ustc.edu.cn&amp;#x2F;debian&amp;#x2F;dists&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;替换&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;http:&amp;#x2F;&amp;#x2F;archive.ubuntu.com&amp;#x2F;ubuntu&amp;#x2F;dists&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;为&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;https:&amp;#x2F;&amp;#x2F;mirrors.ustc.edu.cn&amp;#x2F;ubuntu&amp;#x2F;dists&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;退出保存后执行 sudo debtap -u&lt;/p&gt;
+&lt;p&gt;很快就可以装好&lt;/p&gt;
+&lt;p&gt;然后我们装 WPS&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yay -S wps-office ttf-wps-fonts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yay -S wps-office-mui-zh-cn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;必备字体安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#必备字体安装&#34;&gt;#&lt;/a&gt; 必备字体安装&lt;/h4&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S wqy-bitmapfont wqy-microhei \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; wqy-zenhei adobe-source-code-pro-fonts \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; adobe-source-han-sans-cn-fonts ttf-monaco ttf-dejavu ttf-hanazono \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; noto-fonts noto-fonts-cjk noto-fonts-emoji &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;删除软件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#删除软件&#34;&gt;#&lt;/a&gt; 删除软件&lt;/h3&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -Rs 软件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;美化界面&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#美化界面&#34;&gt;#&lt;/a&gt; 美化界面&lt;/h3&gt;
+&lt;h3 id=&#34;下载docker&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载docker&#34;&gt;#&lt;/a&gt; 下载 docker&lt;/h3&gt;
+&lt;p&gt;每个程序员都应该拥有一个 dock！&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S latte-dock&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;打开 latte-dock 即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/20200723023646972.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;换mac主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#换mac主题&#34;&gt;#&lt;/a&gt; 换 mac 主题&lt;/h3&gt;
+&lt;p&gt;设置 - 外观 - 全局主题，点击右下角获取新的全局主题，搜索 &lt;code&gt;McMojave&lt;/code&gt; ，安装，然后关闭。在全局主题设置页面，选中刚刚下好的 McMojave。就会变成好看的 mac 啦！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2021/02/20/Manjaro%E9%85%8D%E7%BD%AE/2020072302322817.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;转载说明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#转载说明&#34;&gt;#&lt;/a&gt; 转载说明&lt;/h2&gt;
+&lt;p&gt;本文内容主要来自两篇博客：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_53424000/article/details/110942764?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161380408316780266286402%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=161380408316780266286402&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2&#34;&gt;https://blog.csdn.net/qq_53424000/article/details/110942764?ops_request_misc=%7B%22request%5Fid%22%3A%22161380408316780266286402%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=161380408316780266286402&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2&lt;/a&gt;&lt;sub&gt;all&lt;/sub&gt;first_r&lt;/p&gt;
+&lt;p&gt;以及&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_40293491/article/details/107526553?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161380178216780274161976%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=161380178216780274161976&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2&#34;&gt;https://blog.csdn.net/weixin_40293491/article/details/107526553?ops_request_misc=%7B%22request%5Fid%22%3A%22161380178216780274161976%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=161380178216780274161976&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2&lt;/a&gt;&lt;sub&gt;all&lt;/sub&gt;first_rank_v2~rank_v29-8-107526553.pc_search_result_no_baidu_js&amp;amp;utm_term=kde%E9%85%8D%E7%BD%AE&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2021/01/12/Win10%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
             <title>Win10桌面美化</title>
