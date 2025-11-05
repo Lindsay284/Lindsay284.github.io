@@ -1,0 +1,259 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --fg: #20212a;
+  --muted: #6b7280;
+  --section-bg: #ffffff;
+  --accent: #3056d3;
+  --border: #e5e7eb;
+  --shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+  --transition: 0.2s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+audio {
+  width: 100%;
+}
+
+.wrapper {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.page-header,
+.page-footer {
+  background: var(--section-bg);
+  box-shadow: var(--shadow);
+}
+
+.page-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: var(--accent);
+}
+
+.page-header p {
+  margin: 0 auto;
+  max-width: 700px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.page-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, rgba(48, 86, 211, 0.08), rgba(245, 247, 251, 0.4));
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.section-intro {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.technique-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.technique-card {
+  background: var(--section-bg);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.technique-card header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.technique-card header p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.technique-content {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.audio-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .audio-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.audio-column {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(247, 249, 255, 0.7);
+}
+
+.audio-column h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.visual-blocks {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .visual-blocks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.visual-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: #fff;
+}
+
+.visual-card h5 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.visual-card img {
+  border-radius: 8px;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.visual-card p {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.model-figure {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--section-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.model-figure img {
+  border-radius: 12px;
+  border: 1px solid rgba(107, 114, 128, 0.16);
+}
+
+.model-figure figcaption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tsne-figure {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--section-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.tsne-figure img {
+  border-radius: 12px;
+  border: 1px solid rgba(107, 114, 128, 0.16);
+}
+
+.tsne-figure figcaption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.demo-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--section-bg);
+}
+
+.demo-table th,
+.demo-table td {
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.demo-table thead {
+  background: rgba(48, 86, 211, 0.08);
+  color: var(--accent);
+}
+
+.demo-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.demo-audio {
+  max-width: 240px;
+  margin: 0 auto;
+}

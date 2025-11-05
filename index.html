@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歌声技法与 Demo 展示</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="wrapper">
+        <h1>歌声技法分析与 Demo 展示</h1>
+        <p>
+          对常见的五种歌声技法进行了 F0 曲线与频谱图的对比分析，并展示特征提取器隐空间的 t-SNE 聚类结果以及当前的多组合
+          Demo，帮助快速了解模型的表现。
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="model" class="section section-alt">
+        <div class="wrapper">
+          <h2>模型结构</h2>
+          <p class="section-intro">
+            模型结构分为两个部分，一部分是编码器，一部分是解码器。编码器负责将各个特征（音高、音色、风格、内容、节奏）有效编码；解码器负责将各个特征重新组合，重建成源梅尔频谱图。
+            <br><br>
+            训练阶段对图中的六个 Encoder 进行解耦学习，推理时可以根据需求组合来自不同目标的风格、音色与内容特征，输入到解码器中进行解码。Flow-Matching
+            Transformer 作为解码器，在保证推理速度的同时能够兼顾合成质量。
+            <br><br>
+            多任务学习能够保证音色编码器和风格编码器学习到独立的特征。由于音色和风格通常是耦合的（如气声是一种风格，但改变风格的同时，音色也会变得不一样），我们需要将音色和风格分得更开。此框架试图通过多任务学习来解决这一问题。
+            <br><br>
+            此框架对音高处理也有所创新，在编码音高时，对音高进行对数操作，并除以440.这是由于十二平均律本身就将音高在指数阈上，平均分成了12份，并以440Hz的A这个音作为标准音。这样可以让音高关系变成简单的线性关系，更方便我们用更简单的模型进行学习。
+          </p>
+          <figure class="model-figure">
+            <img
+              id="modelImage"
+              src="assets/images/model/model.png"
+              alt="模型结构示意图"
+              loading="lazy"
+            />
+            <figcaption>模型结构示意图：多个编码器分别提取内容、风格与音色特征，解码器负责重建歌声。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="techniques" class="section">
+        <div class="wrapper">
+          <h2>歌声技法分析</h2>
+          <p class="section-intro">
+            对于5种常见的歌唱技法，我进行了基频分析和频谱分析，提供可视化的数据来直观的对比不同演唱方式在声学特征上的显著差异。分析的技法有颤音、滑音、假声、咽音和气声。
+          </p>
+          <div id="techniqueGrid" class="technique-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="latent" class="section section-alt">
+        <div class="wrapper">
+          <h2>隐空间 t-SNE 可视化</h2>
+          <p class="section-intro">
+            对联合框架的模型进行了初步的训练，该可视化展示目前训练中，音色编码器和风格编码器的 t-SNE 降维结果，可观察到不同歌声样本在隐空间中的聚类关系。其中Speaker Clustering的结果来自Timbre Encoder的tsne降维；Style Clustering的结果来自Style Encoder的tsne降维。
+            <br><br>
+            可以看到，歌唱者和风格都能够有明显的聚类，但目前的训练程度还不够，虽能够明显的看出有聚类的趋势，但还没有明确的分界点或分界线，能够完全分隔这些音色和风格。
+            <br><br>
+            目前模型还需要继续迭代训练，并且模型还没有加入多任务学习的指导。待继续迭代、以及加入多任务学习后，应当能够显著提升聚类效果，编码器能够学习到更优秀的特征。
+          </p>
+          <figure class="tsne-figure">
+            <img
+              id="tsneImage"
+              src="assets/images/tsne/tsne.png"
+              alt="编码器 t-SNE 聚类图"
+              loading="lazy"
+            />
+            <figcaption id="tsneCaption"></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="demos" class="section">
+        <div class="wrapper">
+          <h2>音频 Demo</h2>
+          <p class="section-intro">
+            此结果是由语音解耦特征来进行重建的实验得到的，我能够使用已有的开源语音解耦编码器来跑通整个框架并进行重建。
+            但由于语音特征对于F0的建模并不准确，在转换后，音高有非常明显的偏差。但内容、音色和速度能够得到较好的建模（内容几乎没变，音频时长也未发生改变，音色也被充分模仿了）。语音解耦的缺点是，它并未将歌唱的“风格”包含在内，对音高的建模也较为差劲。而我的模型将补齐这一点，训练出清晰解耦的音色、风格和音高编码器。
+            <br><br>
+            此结果能够充分证明我方法的有效性。
+          </p>
+          <div class="demo-table-wrapper">
+            <table class="demo-table" aria-describedby="demos">
+              <thead>
+                <tr>
+                  <th scope="col">原始演唱</th>
+                  <th scope="col">参考音频</th>
+                  <th scope="col">模型合成</th>
+                </tr>
+              </thead>
+              <tbody id="demoTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="wrapper">
+        <p>© 2024 歌声技法可视化展示</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
